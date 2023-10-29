@@ -1,17 +1,33 @@
-//Demon Data
 const demons = [
   { name: "Balmet", sigils: ["sigil1", "sigil2", "sigil3", "sigil4"] },
   { name: "Anek", sigils: ["sigil5", "sigil6", "sigil7", "sigil2"] },
+  { name: "Telduk", sigils: ["sigil8", "sigil9", "sigil6", "sigil10"] },
+  { name: "Sebbos", sigils: ["sigil2", "sigil11", "sigil5", "sigil7"] },
+  { name: "Shadat", sigils: ["sigil9", "sigil4", "sigil2", "sigil10"] },
+  { name: "Azel", sigils: ["sigil3", "sigil11", "sigil8", "sigil10"] },
+  { name: "Kovos", sigils: ["sigil3", "sigil12", "sigil9", "sigil11"] },
+  { name: "Maset", sigils: ["sigil7", "sigil10", "sigil5", "sigil13"] },
+  { name: "Variketh", sigils: ["sigil4", "sigil8", "sigil5", "sigil6"] },
+  { name: "Fermok", sigils: ["sigil4", "sigil5", "sigil11", "sigil7"] },
+  { name: "Teshak", sigils: ["sigil11", "sigil4", "sigil3", "sigil2"] },
+  { name: "Uzkaret", sigils: ["sigil3", "sigil9", "sigil2", "sigil10"] },
 ];
 
 let selectedSigils = [];
 
 // function to add sigils
 function addSigil(sigil) {
-  console.log(`Adding sigil: ${sigil}`); // Debug log
+  const buttonElement = document.querySelector(`[data-sigil='${sigil}']`);
 
   if (!selectedSigils.includes(sigil)) {
     selectedSigils.push(sigil);
+    buttonElement.classList.remove("btn-primary");
+    buttonElement.classList.add("btn-success");
+  } else {
+    const index = selectedSigils.indexOf(sigil);
+    selectedSigils.splice(index, 1);
+    buttonElement.classList.add("btn-primary");
+    buttonElement.classList.remove("btn-success");
   }
 
   filterDemons();
@@ -19,31 +35,26 @@ function addSigil(sigil) {
 
 function clearSigils() {
   selectedSigils = [];
-  displayDemons(demons);
+  const buttons = document.querySelectorAll("[data-sigil]");
+  buttons.forEach((button) => {
+    button.classList.add("btn-primary");
+    button.classList.remove("btn-success");
+  });
+  filterDemons();
 }
 
 // function to filter demons through selected sigils
 function filterDemons() {
-  console.log(`Filtering with sigils: ${selectedSigils.join(", ")}`); // Debug log
-
   const filteredDemons = demons.filter((demon) => {
     return selectedSigils.every((sigil) => demon.sigils.includes(sigil));
   });
-
-  console.log(
-    `Filtered demons: ${filteredDemons.map((d) => d.name).join(", ")}`
-  ); // Debug log
-
   displayDemons(filteredDemons);
 }
 
 // function to display demon list
 function displayDemons(demonList) {
-  console.log(`Displaying demons: ${demonList.map((d) => d.name).join(", ")}`); // Debug log
-
   const demonNamesDiv = document.getElementById("demonNames");
   demonNamesDiv.innerHTML = "";
-
   demonList.forEach((demon) => {
     demonNamesDiv.innerHTML += `<p>${demon.name}</p>`;
   });

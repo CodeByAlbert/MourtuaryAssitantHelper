@@ -9,12 +9,14 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <link href="https://fonts.cdnfonts.com/css/nosifer" rel="stylesheet" />
+
     <link rel="stylesheet" href="css/styles.css" />
     <title>Mortuary's Assitant Helper</title>
   </head>
   <body>
     <!--NavBar-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-dark text-bg-light bg-body-tertiary">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Mortuary's Assitant Helper</a>
         <button
@@ -34,7 +36,7 @@
               <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Sigil Helper</a>
+              <a class="nav-link" href="#SigilHelper">Sigil Helper</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Demon Info</a>
@@ -47,37 +49,203 @@
       </div>
     </nav>
     <!--Sigil Helper-->
-    <div class="container mt-5">
-      <h2>Sigil Helper</h2>
-      <div id="sigils">
-        <button class="btn btn-primary" onclick="addSigil('sigil1')">
-          Sigil 1
-        </button>
-        <button class="btn btn-primary" onclick="addSigil('sigil2')">
-          Sigil 2
-        </button>
-        <button class="btn btn-primary" onclick="addSigil('sigil3')">
-          Sigil 3
-        </button>
-        <button class="btn btn-primary" onclick="addSigil('sigil4')">
-          Sigil 4
-        </button>
-        <button class="btn btn-primary" onclick="addSigil('sigil5')">
-          Sigil 5
-        </button>
-        <button class="btn btn-primary" onclick="addSigil('sigil6')">
-          Sigil 6
-        </button>
-        <button class="btn btn-primary" onclick="addSigil('sigil7')">
-          Sigil 7
-        </button>
-        <!--This button will clear the sigils-->
-        <button class="btn btn-danger mt2" onclick="clearSigils()">
-          clear
-        </button>
-      </div>
-      <div id="demonNames" class="mt-4">
-        <!-- Names will be displayed here -->
+    <div
+      class="container-md d-flex justify-content-center border-4 border-black"
+    >
+      <div class="container mt-5">
+        <h2 class="text-center" id="SigilHelper">Sigil Helper</h2>
+        <div id="sigils">
+          <div class="row">
+            <div class="col">
+              <button
+                class="btn btn-icon"
+                data-sigil="sigil1"
+                onclick="addSigil('sigil1')"
+              >
+                <img
+                  src="assets/Sigil Icons/Sigil 1.png"
+                  alt="Sigil 1"
+                  width="40"
+                />
+              </button>
+            </div>
+            <div class="col">
+              <button
+                class="btn btn-icon"
+                data-sigil="sigil2"
+                onclick="addSigil('sigil2')"
+              >
+                <img
+                  src="assets/Sigil Icons/Sigil 2.png"
+                  alt="Sigil 2"
+                  width="40"
+                />
+              </button>
+            </div>
+            <div class="col">
+              <button
+                class="btn btn-icon"
+                data-sigil="sigil3"
+                onclick="addSigil('sigil3')"
+              >
+                <img
+                  src="assets/Sigil Icons/Sigil 3.png"
+                  alt="Sigil 3"
+                  width="40"
+                />
+              </button>
+            </div>
+            <div class="col">
+              <button
+                class="btn btn-icon"
+                data-sigil="sigil4"
+                onclick="addSigil('sigil4')"
+              >
+                <img
+                  src="assets/Sigil Icons/Sigil 4.png"
+                  alt="Sigil 4"
+                  width="40"
+                />
+              </button>
+            </div>
+            <div class="col">
+              <button
+                class="btn btn-icon"
+                data-sigil="sigil5"
+                onclick="addSigil('sigil5')"
+              >
+                <img
+                  src="assets/Sigil Icons/Sigil 5.png"
+                  alt="Sigil 5"
+                  width="40"
+                />
+              </button>
+            </div>
+            <div class="col">
+              <button
+                class="btn btn-icon"
+                data-sigil="sigil6"
+                onclick="addSigil('sigil6')"
+              >
+                <img
+                  src="assets/Sigil Icons/Sigil 6.png"
+                  alt="Sigil 6"
+                  width="40"
+                />
+              </button>
+            </div>
+            <div class="col">
+              <button
+                class="btn btn-icon"
+                data-sigil="sigil7"
+                onclick="addSigil('sigil7')"
+              >
+                <img
+                  src="assets/Sigil Icons/Sigil 7.png"
+                  alt="Sigil 7"
+                  width="40"
+                />
+              </button>
+            </div>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col">
+              <button
+                class="btn btn-icon"
+                data-sigil="sigil8"
+                onclick="addSigil('sigil8')"
+              >
+                <img
+                  src="assets/Sigil Icons/Sigil 8.png"
+                  alt="Sigil 8"
+                  width="40"
+                />
+              </button>
+            </div>
+            <div class="col">
+              <button
+                class="btn btn-icon"
+                data-sigil="sigil9"
+                onclick="addSigil('sigil9')"
+              >
+                <img
+                  src="assets/Sigil Icons/Sigil 9.png"
+                  alt="Sigil 9"
+                  width="40"
+                />
+              </button>
+            </div>
+            <div class="col">
+              <button
+                class="btn btn-icon"
+                data-sigil="sigil10"
+                onclick="addSigil('sigil10')"
+              >
+                <img
+                  src="assets/Sigil Icons/Sigil 10.png"
+                  alt="Sigil 10"
+                  width="40"
+                />
+              </button>
+            </div>
+            <div class="col">
+              <button
+                class="btn btn-icon"
+                data-sigil="sigil11"
+                onclick="addSigil('sigil11')"
+              >
+                <img
+                  src="assets/Sigil Icons/Sigil 11.png"
+                  alt="Sigil 11"
+                  width="40"
+                />
+              </button>
+            </div>
+            <div class="col">
+              <button
+                class="btn btn-icon"
+                data-sigil="sigil12"
+                onclick="addSigil('sigil12')"
+              >
+                <img
+                  src="assets/Sigil Icons/Sigil 12.png"
+                  alt="Sigil 12"
+                  width="40"
+                />
+              </button>
+            </div>
+            <div class="col">
+              <button
+                class="btn btn-icon"
+                data-sigil="sigil13"
+                onclick="addSigil('sigil13')"
+              >
+                <img
+                  src="assets/Sigil Icons/Sigil 13.png"
+                  alt="Sigil 13"
+                  width="40"
+                />
+              </button>
+            </div>
+            <div class="col">
+              <button class="btn btn-danger btn-icon" onclick="clearSigils()">
+                Clear
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <style>
+          .btn-icon {
+            padding: 8px 12px; /* Adjust padding as needed */
+            margin: 5px;
+          }
+        </style>
+
+        <div id="demonNames" class="mt-4">
+          <!-- Names will be displayed here -->
+        </div>
       </div>
     </div>
 

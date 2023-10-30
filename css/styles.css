@@ -1,3 +1,89 @@
-* {
+body {
   font-family: "Nosifer", sans-serif;
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(0, 0, 0) 0%,
+    rgb(64, 64, 64) 90.2%
+  );
+}
+
+.navbar {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(0, 0, 0) 0%,
+    rgb(64, 64, 64) 90.2%
+  );
+}
+
+.btn-icon {
+  padding: 8px 12px;
+  margin: 5px;
+}
+
+.navbar .navbar-brand {
+  color: rgb(201, 17, 17) !important;
+}
+
+.nav-link {
+  color: #8b0000;
+}
+
+.nav-link:hover {
+  color: #a52a2a;
+}
+
+body #sigilHelperText {
+  color: #8b0000; /* Blood red */
+}
+
+#demonInfoText {
+  color: #8b0000;
+}
+
+#demonNames {
+  background: linear-gradient(
+    90deg,
+    #8a0303,
+    #700404,
+    #560505,
+    #3c0606,
+    #220707,
+    #080808
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Ensures the gradient shows as the text color */
+}
+
+body #demonHouses {
+  height: auto; /* Make it take the full viewport height */
+  overflow-y: auto; /* Enable vertical scrolling for its content */
+  overflow-x: hidden; /* Hide horizontal scrolling (if not necessary) */
+  position: relative; /* Added to stack the content correctly */
+}
+
+div.container-md.d-flex#demonHouses {
+  display: none;
+}
+
+#demonHouses .card-img-top {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+#demonHouses .card {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  padding: 0 !important;
+}
+
+.card-img-top {
+  width: 100%; /* Ensures the image takes full width of the card */
+  height: auto;
 }

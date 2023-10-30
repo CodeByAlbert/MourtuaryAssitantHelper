@@ -62,3 +62,27 @@ function displayDemons(demonList) {
 
 // Initial call to display all demons
 displayDemons(demons);
+
+// Demon Houses View
+
+document.addEventListener("DOMContentLoaded", function () {
+  let demonHousesNav = document.getElementById("demonHousesNav");
+  let demonHouses = document.getElementById("demonHouses");
+  let sigilHelperNav = document.getElementById("sigilHelperNav");
+  let sigilHelper = document.getElementById("sigilHelper");
+
+  demonHousesNav.addEventListener("click", toggleView);
+  sigilHelperNav.addEventListener("click", toggleView);
+
+  function toggleView(event) {
+    if (demonHousesNav.contains(event.target)) {
+      demonHouses.style.display = "block";
+      sigilHelper.style.display = "none";
+    } else if (sigilHelperNav.contains(event.target)) {
+      demonHouses.style.display = "none";
+      sigilHelper.style.display = "block";
+    }
+  }
+});
+
+toggleView();

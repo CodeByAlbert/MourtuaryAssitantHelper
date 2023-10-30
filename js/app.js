@@ -37,7 +37,6 @@ function clearSigils() {
   selectedSigils = [];
   const buttons = document.querySelectorAll("[data-sigil]");
   buttons.forEach((button) => {
-    button.classList.add("btn-primary");
     button.classList.remove("btn-success");
   });
   filterDemons();

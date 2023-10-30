@@ -43,12 +43,12 @@ body #sigilHelperText {
 #demonNames {
   background: linear-gradient(
     90deg,
-    #8a0303,
-    #700404,
-    #560505,
-    #3c0606,
-    #220707,
-    #080808
+    #a31313,
+    #881515,
+    #6f1a1a,
+    #521c1c,
+    #391e1e,
+    #1a1a1a
   );
   -webkit-background-clip: text;
   background-clip: text;

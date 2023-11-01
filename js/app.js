@@ -21,12 +21,10 @@ function addSigil(sigil) {
 
   if (!selectedSigils.includes(sigil)) {
     selectedSigils.push(sigil);
-    //buttonElement.classList.remove("btn-primary");
     buttonElement.classList.add("btn-success");
   } else {
     const index = selectedSigils.indexOf(sigil);
     selectedSigils.splice(index, 1);
-    //buttonElement.classList.add("btn-primary");
     buttonElement.classList.remove("btn-success");
   }
 

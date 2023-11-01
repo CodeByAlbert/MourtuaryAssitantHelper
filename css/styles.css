@@ -15,6 +15,11 @@ body {
   );
 }
 
+/*Because this bootstrap class uses a nowrap whitespace*/
+.navbar-brand {
+  white-space: normal;
+}
+
 .btn-icon {
   padding: 8px 12px;
   margin: 5px;
